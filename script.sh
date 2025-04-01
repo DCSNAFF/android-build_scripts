@@ -38,6 +38,10 @@ export BUILD_USERNAME=Masood
 export BUILD_HOSTNAME=crave
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
+echo "Applying custom patch for fsgen"
+sed -i '/soong_filesystem_creator {/a\    enabled: false,' build/soong/fsgen/Android.bp
+echo "Patch applied successfully"
+
 # initiate build setup
 . build/envsetup.sh
 
