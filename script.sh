@@ -55,4 +55,4 @@ fi
 
 
 echo "======= Export Done ======"
-lunch lineage_topaz-bp1a-userdebug && make installclean && mka bacon 
+lunch lineage_topaz-bp1a-userdebug && mka bacon 
