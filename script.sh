@@ -9,7 +9,7 @@ echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/BaranAspect-Development/rom-build.git -b evo-x .repo/local_manifests
+git clone https://github.com/Topaz-Labs/rom-build.git -b test .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -34,19 +34,25 @@ echo "Unnecessary dirs removed"
 echo "==========================="
 
 # Export
-export BUILD_USERNAME=Masood
+export BUILD_USERNAME=TeamAspectPower
 export BUILD_HOSTNAME=crave
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
-echo "Applying custom patch for fsgen"
-sed -i '/soong_filesystem_creator {/a\    enabled: false,' build/soong/fsgen/Android.bp
-echo "Patch applied successfully"
+FSGEN_BP="build/soong/fsgen/Android.bp"
+
+# Check if patch is already applied
+if ! grep -q 'enabled: false' "$FSGEN_BP"; then
+    echo "Applying custom patch for fsgen..."
+    sed -i '/soong_filesystem_creator {/a\    enabled: false,' "$FSGEN_BP"
+    echo "Patch applied successfully"
+else
+    echo "Patch already applied. Skipping..."
+fi
 
 # initiate build setup
 . build/envsetup.sh
 
-export WITH_GMS=false
 
 
 echo "======= Export Done ======"
-lunch lineage_topaz-bp1a-userdebug && mka bacon 
+lunch lineage_topaz-bp1a-userdebug && make installclean && mka bacon 
