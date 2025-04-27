@@ -3,13 +3,13 @@
 rm -rf .repo/local_manifests/
 
 # repo init rom
-repo init -u https://github.com/Masood-J/android_lineage.git -b lineage-22.2 --git-lfs
+repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 15 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/Topaz-Labs/rom-build.git -b test .repo/local_manifests
+git clone https://github.com/BaranAspect-Development/android-rom-build -b derp-15.0 .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -38,21 +38,10 @@ export BUILD_USERNAME=TeamAspectPower
 export BUILD_HOSTNAME=crave
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
-FSGEN_BP="build/soong/fsgen/Android.bp"
-
-# Check if patch is already applied
-if ! grep -q 'enabled: false' "$FSGEN_BP"; then
-    echo "Applying custom patch for fsgen..."
-    sed -i '/soong_filesystem_creator {/a\    enabled: false,' "$FSGEN_BP"
-    echo "Patch applied successfully"
-else
-    echo "Patch already applied. Skipping..."
-fi
-
 # initiate build setup
 . build/envsetup.sh
 
 
 
 echo "======= Export Done ======"
-lunch lineage_topaz-bp1a-userdebug && mka bacon 
+lunch derp_topaz-userdebug && mka derp
