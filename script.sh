@@ -3,13 +3,13 @@
 rm -rf .repo/local_manifests/
 
 # repo init rom
-repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 15 --git-lfs
+repo init -u https://github.com/neonred226/manifest_derp.git -b 15.2 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/BaranAspect-Development/android-rom-build -b derp-15.0 .repo/local_manifests
+git clone https://github.com/BaranAspect-Development/android-rom-build -b derp-15.2 .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -34,7 +34,7 @@ echo "Unnecessary dirs removed"
 echo "==========================="
 
 # Export
-export BUILD_USERNAME=TeamAspectPower
+export BUILD_USERNAME=NEONXD
 export BUILD_HOSTNAME=crave
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
@@ -42,6 +42,5 @@ export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 . build/envsetup.sh
 
 
-
 echo "======= Export Done ======"
-lunch derp_topaz-userdebug && mka derp
+lunch lineage_topaz-bp1a-userdebug && mka derp
