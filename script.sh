@@ -9,7 +9,7 @@ echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/BaranAspect-Development/android-rom-build -b derp-15.2 .repo/local_manifests
+git clone https://github.com/neonred226/android-rom-build -b derp-15.2 .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
