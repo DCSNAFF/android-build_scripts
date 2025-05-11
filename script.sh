@@ -20,19 +20,6 @@ echo "============="
 echo "Sync success"
 echo "============="
 
-rm -rf hardware/qcom-caf/msm8996 \
-       hardware/qcom-caf/msm8998 \
-       hardware/qcom-caf/sdm845 \
-       hardware/qcom-caf/sm8150 \
-       hardware/qcom-caf/sm8250 \
-       hardware/qcom-caf/sm8350 \
-       hardware/qcom-caf/sm8450 \
-       hardware/qcom-caf/sm8550
-       
-echo "==========================="
-echo "Unnecessary dirs removed"
-echo "==========================="
-
 # Export
 export BUILD_USERNAME=NEONXD
 export BUILD_HOSTNAME=crave
@@ -43,4 +30,4 @@ export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
 
 echo "======= Export Done ======"
-derpfest topaz
+lunch lineage_topaz-bp1a-userdebug && mka derp
