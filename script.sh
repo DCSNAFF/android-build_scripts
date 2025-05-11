@@ -43,4 +43,4 @@ export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
 
 echo "======= Export Done ======"
-lunch lineage_topaz-bp1a-userdebug && mka derp
+derpfest topaz
