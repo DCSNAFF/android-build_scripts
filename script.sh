@@ -3,7 +3,7 @@
 rm -rf .repo/local_manifests/
 
 # repo init rom
-repo init -u https://github.com/neonred226/manifest_derp.git -b 15.2 --git-lfs
+repo init -u https://github.com/DerpFest-LOS/android_manifest.git -b 15.2 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
