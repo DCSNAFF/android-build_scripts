@@ -20,8 +20,11 @@ echo "============="
 echo "Sync success"
 echo "============="
 
+# Signing keys
+git clone https://github.com/AbuRider/vendor_signing.git vendor/lineage/signing/keys
+
 # Export
-export BUILD_USERNAME=kingtaksaka
+export BUILD_USERNAME=bawok
 export BUILD_HOSTNAME=crave
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
