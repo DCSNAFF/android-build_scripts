@@ -25,7 +25,7 @@ git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-
 
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-22.2 device/mediatek/sepolicy_vndr
 
-git clone https://github.com/AbuRider/vendor_extra.git -b derpfest vendor/lineage/signing/keys
+git clone https://github.com/AbuRider/vendor_extra.git -b master vendor/lineage-priv/keys
 
 /opt/crave/resync.sh
 
