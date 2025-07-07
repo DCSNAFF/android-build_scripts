@@ -21,7 +21,7 @@ echo "Sync success"
 echo "============="
 
 # Signing keys
-git clone https://github.com/AbuRider/vendor_signing.git vendor/lineage/signing/keys
+git clone https://github.com/AbuRider/vendor_extra.git -b derpfest vendor/lineage/signing/keys
 
 # Export
 export BUILD_USERNAME=bawok
@@ -30,7 +30,5 @@ export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
 # initiate build setup
 . build/envsetup.sh
-
-
-echo "======= Export Done ======"
-lunch lineage_earth-bp1a-userdebug && mka derp
+lunch lineage_earth-bp1a-userdebug
+mka derp -j$(nproc --all)
