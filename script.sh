@@ -23,9 +23,14 @@ echo "============="
 # Signing keys
 git clone https://github.com/AbuRider/vendor_extra.git -b derpfest vendor/lineage/signing/keys
 
+# Fix eror clang
+rm -rf prebuilts/clang/host/linux-x86
+
+
 # Export
 export BUILD_USERNAME=bawok
 export BUILD_HOSTNAME=crave
+export TZ=Asia/Jakarta
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
 # initiate build setup
