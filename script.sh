@@ -1,27 +1,27 @@
 #!/bin/bash
 
-rm -rf .repo/local_manifests/
-
 # repo init rom
 repo init -u https://github.com/DerpFest-LOS/android_manifest.git -b 15.2 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
-# Local manifests
-git clone https://github.com/AbuRider/local_manifests -b 15.2 .repo/local_manifests
-echo "============================"
-echo "Local manifest clone success"
-echo "============================"
+# dontol kucai
+git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Derpfest-15.2 device/xiaomi/earth
 
-# build
-/opt/crave/resync.sh
-echo "============="
-echo "Sync success"
-echo "============="
+git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-22.2 vendor/xiaomi/earth
 
-# Signing keys
+git clone https://github.com/LineageOS/android_kernel_xiaomi_earth.git -b lineage-22.2 kernel/xiaomi/earth
+
+git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-22.2 hardware/xiaomi
+
+git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-22.2 hardware/mediatek
+
+git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-22.2 device/mediatek/sepolicy_vndr
+
 git clone https://github.com/AbuRider/vendor_extra.git -b derpfest vendor/lineage/signing/keys
+
+/opt/crave/resync.sh
 
 # Fix eror clang
 rm -rf prebuilts/clang/host/linux-x86
