@@ -32,8 +32,8 @@ git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git
 git clone https://github.com/AbuRider/vendor_extra.git -b master vendor/lineage-priv/keys
 
 # uji coba
-rm -rf vendor/lineage
-git clone https://github.com/AbuRider/android_vendor_derpfest.git -b 15.2 vendor/lineage
+# rm -rf vendor/lineage
+# git clone https://github.com/AbuRider/android_vendor_derpfest.git -b 15.2 vendor/lineage
 
 # Export
 export BUILD_USERNAME=rmdw
