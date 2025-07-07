@@ -6,6 +6,12 @@ echo "=================="
 echo "Repo init success"
 echo "=================="
 
+# sync
+/opt/crave/resync.sh | repo sync
+echo "==============="
+echo "sync success..."
+echo "==============="
+
 # dontol kucai
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Derpfest-15.2 device/xiaomi/earth
 
@@ -23,9 +29,9 @@ git clone https://github.com/AbuRider/vendor_extra.git -b derpfest vendor/lineag
 
 /opt/crave/resync.sh
 
-# Fix eror clang
+# fix eror
 rm -rf prebuilts/clang/host/linux-x86
-
+git clone --depth=1 https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 -b android-15.0.0_r32 prebuilts/clang/host/linux-x86
 
 # Export
 export BUILD_USERNAME=bawok
