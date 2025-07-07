@@ -8,7 +8,7 @@ echo "=================="
 
 # sync
 /opt/crave/resync.sh || repo sync
-echo "======================{=={="
+echo "==========================="
 echo " sync repository success..."
 echo "==========================="
 
