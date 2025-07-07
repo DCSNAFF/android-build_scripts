@@ -7,10 +7,10 @@ echo "Repo init success"
 echo "=================="
 
 # sync
-/opt/crave/resync.sh | repo sync
-echo "==============="
-echo "sync success..."
-echo "==============="
+/opt/crave/resync.sh || repo sync
+echo "======================{=={="
+echo " sync repository success..."
+echo "==========================="
 
 # dontol kucai
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Derpfest-15.2 device/xiaomi/earth
@@ -34,7 +34,7 @@ rm -rf prebuilts/clang/host/linux-x86
 git clone --depth=1 https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 -b android-15.0.0_r32 prebuilts/clang/host/linux-x86
 
 # Export
-export BUILD_USERNAME=bawok
+export BUILD_USERNAME=rmdw
 export BUILD_HOSTNAME=crave
 export TZ=Asia/Jakarta
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
