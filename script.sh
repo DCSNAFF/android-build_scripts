@@ -2,6 +2,7 @@
 
 # linux 86
 rm -rf prebuilts/clang/host/linux-x86
+rm -rf prebuilts/rust
 
 # repo init rom
 repo init -u https://github.com/DerpFest-LOS/android_manifest.git -b 15.2 --git-lfs
