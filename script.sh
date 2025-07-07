@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# linux 86
+# fix eror
 rm -rf prebuilts/clang/host/linux-x86
 rm -rf prebuilts/rust
 
