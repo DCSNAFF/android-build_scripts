@@ -30,9 +30,6 @@ git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git
 
 git clone https://github.com/AbuRider/vendor_extra.git -b master vendor/lineage-priv/keys
 
-# fix eror
-# git clone --depth=1 https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 -b android-15.0.0_r32 prebuilts/clang/host/linux-x86
-
 # Export
 export BUILD_USERNAME=rmdw
 export BUILD_HOSTNAME=crave
